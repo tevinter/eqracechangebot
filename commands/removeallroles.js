@@ -1,16 +1,16 @@
 // !removeallroles @username
 module.exports = {
-    name: "removeallroles",
-    description: "Removes all of a users roles",
-    permissions: "ADMINISTRATOR",
-    syntax: "!removeallroles @username",
+    name: 'removeallroles',
+    description: 'Removes all of a users roles',
+    permissions: 'ADMINISTRATOR',
+    syntax: '!removeallroles @username',
     execute(msg, args){
         const targetUser = msg.mentions.users.first();
-        const perms = "ADMINISTRATOR"
+        const perms = 'ADMINISTRATOR'
 
         // Must have administrator permissions in discord to call the command
         if (!msg.member.hasPermission(perms)) {
-          msg.channel.send("Must have Discord administrator permissions to use this command.")
+          msg.channel.send('Must have Discord administrator permissions to use this command.')
           return
         }
 

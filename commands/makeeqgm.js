@@ -1,17 +1,17 @@
 // !makeeqgm @username
 module.exports = {
     name: 'makeeqgm',
-    description: "Gives user the EQGM role",
+    description: 'Gives user the EQGM role',
     permissions: 'ADMINISTRATOR',
-    syntax: "!makeeqgm @username",
+    syntax: '!makeeqgm @username',
     execute(msg, args){
         const targetUser = msg.mentions.users.first();
-        const roleName = "EQGM";
-        const perms = "ADMINISTRATOR"
+        const roleName = 'EQGM';
+        const perms = 'ADMINISTRATOR'
         
         // Must have administrator permissions in discord to call the command
         if (!msg.member.hasPermission(perms)) {
-          msg.channel.send("Must have Discord administrator permissions to use this command.")
+          msg.channel.send('Must have Discord administrator permissions to use this command.')
           return
         }
 
@@ -30,7 +30,7 @@ module.exports = {
         })
 
         if (!role) { // role doesn't exist in the Discord Server
-          msg.channel.send(`"${roleName}" role does not exist.`)
+          msg.channel.send(`'${roleName}' role does not exist.`)
           return
         }
 

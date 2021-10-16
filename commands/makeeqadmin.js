@@ -1,17 +1,17 @@
 // !makeeqadmin @username
 module.exports = {
     name: 'makeeqadmin',
-    description: "Gives user the EQAdmin role",
+    description: 'Gives user the EQAdmin role',
     permissions: 'ADMINISTRATOR',
-    syntax: "!makeeqadmin @username",
+    syntax: '!makeeqadmin @username',
     execute(msg, args){
         const targetUser = msg.mentions.users.first();
-        const roleName = "EQAdmin";
-        const perms = "ADMINISTRATOR"
+        const roleName = 'EQAdmin';
+        const perms = 'ADMINISTRATOR'
 
         // Must have administrator permissions in discord to call the command
         if (!msg.member.hasPermission(perms)) {
-          msg.channel.send("Must have Discord administrator permissions to use this command.")
+          msg.channel.send('Must have Discord administrator permissions to use this command.')
           return
         }
 

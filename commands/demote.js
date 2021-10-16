@@ -1,16 +1,16 @@
 // !demote @username roleName
 module.exports = {
-    name: "demote",
-    description: "Demotes the user, removing the given role",
-    permissions: "ADMINISTRATOR",
-    syntax: "!demote @username roleName",
+    name: 'demote',
+    description: 'Demotes the user, removing the given role',
+    permissions: 'ADMINISTRATOR',
+    syntax: '!demote @username roleName',
     execute(msg, args){
         const targetUser = msg.mentions.users.first();
-        const perms = "ADMINISTRATOR"
+        const perms = 'ADMINISTRATOR'
         
         // Must have administrator permissions in discord to call the command
         if (!msg.member.hasPermission(perms)) {
-          msg.channel.send("Must have Discord administrator permissions to use this command.")
+          msg.channel.send('Must have Discord administrator permissions to use this command.')
           return
         }
 

@@ -1,6 +1,6 @@
 const Discord = require ("discord.js"); // Discord js library
-const mariadb = require('mariadb');     // Mariadb connector library
 const dotenv = require('dotenv');
+const mariadb = require('mariadb');     // Mariadb connector library
 dotenv.config({ path: process.cwd() + '/config.env' });// use environment variables for security
 const fs = require('fs');               // filesystem
 
@@ -10,7 +10,7 @@ const fs = require('fs');               // filesystem
 // DB_PORT=3306
 // DB_USER=root
 // DB_PWD=eqemu
-/*
+
 const pool = mariadb.createPool({
      host: process.env.DB_HOST, 
      port: process.env.DB_PORT,
@@ -18,7 +18,7 @@ const pool = mariadb.createPool({
      password: process.env.DB_PWD,
      connectionLimit: 3
 });
-*/
+
 // Establish discord client and log in.
 // .env file must have the Discord bot secret token stored in TOKEN
 const client = new Discord.Client();
